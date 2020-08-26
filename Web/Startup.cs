@@ -10,22 +10,36 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Infrastructure.Data.Repository;
+using Infrastructure.Data;
+using Core.Interfaces;
+using Web.Controllers;
+
 
 namespace Web
 {
     public class Startup
     {
+        private readonly IConfiguration _config;
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _config = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddDbContext<StoreContext>(x => x.UseSqlite(_config.GetConnectionString("DefaultString")));
+            // services.AddSingleton<IMyService>((container) =>
+            // {
+            //     var logger = container.GetRequiredService<ILogger<ProductsController>>();
+            //     return new ProductsController() { Logger = logger };
+            // });
+        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
