@@ -1,0 +1,26 @@
+[
+    {
+        "Name":"Angular Speedster Board 2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":200,
+        "PictureUrl":"/images/products/sb-angular1.png",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Angular Speedster Board 2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":200,
+        "PictureUrl":"/images/products/sb-angular1.png",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Angular Speedster Board 2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":200,
+        "PictureUrl":"/images/products/sb-angular1.png",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    }
+]
