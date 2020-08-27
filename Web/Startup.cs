@@ -15,7 +15,8 @@ using Infrastructure.Data.Repository;
 using Infrastructure.Data;
 using Core.Interfaces;
 using Web.Controllers;
-
+using Web.Helpers;
+using AutoMapper;
 
 namespace Web
 {
@@ -32,6 +33,7 @@ namespace Web
         {
             services.AddControllers();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddAutoMapper(typeof(MappingProfiles));
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddDbContext<StoreContext>(x => x.UseSqlite(_config.GetConnectionString("DefaultString")));
             // services.AddSingleton<IMyService>((container) =>

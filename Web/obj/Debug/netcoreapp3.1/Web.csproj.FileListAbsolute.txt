@@ -64,3 +64,5 @@ C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\Infrastructur
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\Infrastructure.pdb
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\Core.pdb
 C:\Users\PHITX\Desktop\Project\feature\Web\obj\Debug\netcoreapp3.1\Web.csproj.CopyComplete
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
