@@ -17,8 +17,7 @@ using AutoMapper;
 
 namespace Web.Controllers
 {
-    [Route("api/[controller]")]
-    public class ProductsController : ControllerBase
+    public class ProductsController : BaseApiController
     {
         private readonly ILogger _logger;
         private readonly IMapper _mapper;
