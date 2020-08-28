@@ -36,6 +36,7 @@ namespace Web
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddDbContext<StoreContext>(x => x.UseSqlite(_config.GetConnectionString("DefaultString")));
+            //services.Add
             // services.AddSingleton<IMyService>((container) =>
             // {
             //     var logger = container.GetRequiredService<ILogger<ProductsController>>();
@@ -53,6 +54,7 @@ namespace Web
             }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
             app.UseRouting();
 
