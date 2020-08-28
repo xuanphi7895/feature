@@ -1,3 +1,4 @@
+using System.Net;
 using System.Reflection.PortableExecutable;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
@@ -14,6 +15,8 @@ using Core.Specifications;
 using Web.DTOs;
 using System.Linq;
 using AutoMapper;
+using Web.Errors;
+using Microsoft.AspNetCore.Http;
 
 namespace Web.Controllers
 {
@@ -53,11 +56,16 @@ namespace Web.Controllers
             return Ok(_mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products));
         }
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ProductToReturnDto>> getProductById(int id)
         {
             _logger.LogInformation("Get By Id Product {id}", id);
             var spec = new ProductsWithTypesAndbrandsSpecification(id);
             var product = await _productRepository.GetEntityWithSpec(spec);
+            if (product == null) {
+                return NotFound(new ApiResponse(404));
+            }
             return _mapper.Map<Product, ProductToReturnDto>(product);
             //return Ok(await _productRepository.GetEntityWithSpec(spec));
         }
