@@ -2,7 +2,7 @@ namespace Core.Specifications {
     public class ProductSpecParam {
         private const int MaxPageSize = 50;
 
-        public int PageIndex { get; set; } = 10;
+        public int PageIndex { get; set; } = 1;
 
         private int _pageSize = 6;
 
@@ -13,5 +13,10 @@ namespace Core.Specifications {
         public int? TypeId { get; set; }
         public int? BrandId { get; set; }
         public string Sort { get; set; }
+        private string _search;
+        public string Search {
+            get => _search;
+            set => _search = value.ToLower ();
+        }
     }
 }
