@@ -171,13 +171,13 @@
               "target": "Package",
               "version": "[8.0.1, )"
             },
-            "Microsoft.AspNet.Identity.Core": {
+            "Microsoft.AspNetCore.Identity": {
               "target": "Package",
-              "version": "[2.2.3, )"
+              "version": "[2.2.0, )"
             },
-            "Microsoft.AspNet.Identity.EntityFramework": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.2.3, )"
+              "version": "[2.2.0, )"
             },
             "Microsoft.Data.Sqlite.Core": {
               "target": "Package",
