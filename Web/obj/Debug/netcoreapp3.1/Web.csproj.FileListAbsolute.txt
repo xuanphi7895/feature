@@ -71,3 +71,4 @@ C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\Microsoft.Ope
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
