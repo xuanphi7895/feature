@@ -302,6 +302,12 @@
 </app-nav-bar>
 <div class="container" style="margin-top: 140px;">
   <span>{{ title }} app is running!</span>
+  <ul>
+    <li *ngFor='let product of products'>
+      {{product.name}}
+      {{product.id}}
+    </li>
+  </ul>
 </div>
 <!-- Toolbar -->
    
