@@ -40,7 +40,7 @@ namespace Web {
             services.AddCors (options => {
                 options.AddPolicy ("CorsPolicy",
                     builder => {
-                        builder.WithOrigins ("https://localhost:5001, https://localhost:5000")
+                        builder.WithOrigins ("http://localhost:4200")
                             .AllowAnyHeader ()
                             .AllowAnyMethod ();
                     });
