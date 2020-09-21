@@ -18,6 +18,7 @@ using Web.Controllers;
 using Web.Extensions;
 using Web.Helpers;
 using Web.Middleware;
+using Microsoft.EntityFrameworkCore;
 
 namespace Web {
     public class Startup {
@@ -30,7 +31,8 @@ namespace Web {
         public void ConfigureServices (IServiceCollection services) {
             services.AddControllers ();
             services.AddAutoMapper (typeof (MappingProfiles));
-            services.AddDbContext<StoreContext> (x => x.UseSqlite (_config.GetConnectionString ("DefaultString")));
+            // services.AddDbContext<StoreContext> (x => x.UseSqlite (_config.GetConnectionString ("DefaultString")));
+            services.AddDbContext<StoreContext> (sql => sql.UseSqlServer (_config.GetConnectionString ("SQLDefaultString")));
             services.AddSwaggerServices ();
             // services.AddCors (opt => {
             //     opt.AddPolicy ("CorsPolicy", policy => {
@@ -63,7 +65,7 @@ namespace Web {
             app.UseRouting ();
 
             app.UseAuthorization ();
-            
+
             app.UseEndpoints (endpoints => {
                 endpoints.MapControllers ();
             });
