@@ -1,9 +1,17 @@
 [
     {
-        "Name":"Angular Speedster Board 2000",
+        "Name":"Board 2000",
         "Description":"1995-08-22T00:00:00",
         "Price":200,
-        "PictureUrl":"/images/products/sb-angular1.png",
+        "PictureUrl":"/images/products/se1.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Speedster Board 2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":200,
+        "PictureUrl":"/images/products/se2.jpg",
         "ProductTypeId": 1,
         "ProductBrandId": 1
     },
@@ -11,14 +19,94 @@
         "Name":"Angular Speedster Board 2000",
         "Description":"1995-08-22T00:00:00",
         "Price":200,
+        "PictureUrl":"/images/products/se3.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Feedback 2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":200,
+        "PictureUrl":"/images/products/s4.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Evolving  2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":200,
+        "PictureUrl":"/images/products/s5.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Install Speedster Board 2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":150,
         "PictureUrl":"/images/products/sb-angular1.png",
         "ProductTypeId": 1,
         "ProductBrandId": 1
     },
     {
-        "Name":"Angular Speedster Board 2000",
+        "Name":"Board 2000",
         "Description":"1995-08-22T00:00:00",
-        "Price":200,
+        "Price":100,
+        "PictureUrl":"/images/products/sb-angular1.png",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"AddBlogCreatedTimestamp",
+        "Description":"1995-08-22T00:00:00",
+        "Price":300,
+        "PictureUrl":"/images/products/s6.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"InitialCreate",
+        "Description":"1995-08-22T00:00:00",
+        "Price":700,
+        "PictureUrl":"/images/products/s7.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Feedback 2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":900,
+        "PictureUrl":"/images/products/sb-angular1.png",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Evolving  2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":800,
+        "PictureUrl":"/images/products/s8.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Migration",
+        "Description":"1995-08-22T00:00:00",
+        "Price":500,
+        "PictureUrl":"/images/products/si.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"Evolving  2000",
+        "Description":"1995-08-22T00:00:00",
+        "Price":800,
+        "PictureUrl":"/images/products/s9.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name":"EF Core",
+        "Description":"1995-08-22T00:00:00",
+        "Price":500,
         "PictureUrl":"/images/products/sb-angular1.png",
         "ProductTypeId": 1,
         "ProductBrandId": 1

@@ -35,7 +35,7 @@ export class ShopComponent implements OnInit {
       this.products = response.data;
       this.shopParams.pageSize = response.pageSize;
       this.shopParams.pageIndex = response.pageIndex;
-      this.totalCount = response.total;
+      this.totalCount = response.count;
       console.log(response.data);
     }, error => {
       console.log(error);
@@ -60,12 +60,12 @@ export class ShopComponent implements OnInit {
   }
 
    onBrandSelected(brandId: number) {
-    this.shopParams.brandIdSelected = brandId;
+    this.shopParams.brandId = brandId;
     this.getProducts();
   }
 
   onTypeSelected(typeId: number) {
-    this.shopParams.typeIdSelected = typeId;
+    this.shopParams.typeId = typeId;
     this.getProducts();
   }
 
@@ -73,4 +73,9 @@ export class ShopComponent implements OnInit {
     this.shopParams.sortSelected = sort;
     this.getProducts();
   }
+  onPageChanged(event: any){
+    this.shopParams.pageIndex = event.page;
+    this.getProducts();
+  }
+
 }

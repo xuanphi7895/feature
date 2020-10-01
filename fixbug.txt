@@ -1,0 +1,13 @@
+## How to resolve migrations database
+    My Project is Solved.
+    Run in Package Manager Console:
+        Use Visual Studio
+            1.Drop-Database
+            2.Remove-Migration
+            3.Add-Migration InitialCreate
+            4.Update-database
+        Use Visual Studio Code
+            1. dotnet ef database drop
+            2. dotnet ef migrations remove
+            3. dotnet ef migrations add InitialCreate -p Infrastructure -s Web -o Data/Migrations
+            4. dotnet ef database update -p Infrastructure -s Web

@@ -11,3 +11,5 @@ project person
 #### Configuration entity
  - Attribute configuration
  - Fluent API configuration
+
+ 
