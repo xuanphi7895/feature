@@ -31,7 +31,7 @@ namespace Web {
         public void ConfigureServices (IServiceCollection services) {
             services.AddControllers ();
             services.AddAutoMapper (typeof (MappingProfiles));
-            // services.AddDbContext<StoreContext> (x => x.UseSqlite (_config.GetConnectionString ("DefaultString")));
+            //services.AddDbContext<StoreContext> (x => x.UseSqlite (_config.GetConnectionString ("DefaultString")));
             services.AddDbContext<StoreContext> (sql => sql.UseSqlServer (_config.GetConnectionString ("SQLDefaultString")));
             services.AddSwaggerServices ();
             // services.AddCors (opt => {

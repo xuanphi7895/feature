@@ -1,7 +1,8 @@
+using Core.Entities;
+using Infrastructure.Data.Config;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Reflection;
-using Core.Entities;
-using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data {
     public class StoreContext : DbContext {
@@ -9,23 +10,41 @@ namespace Infrastructure.Data {
 
         }
 
-        public DbSet<Product> Products { get; set; }
+        protected override void OnModelCreating (ModelBuilder modelBuilder) {
+             modelBuilder.ApplyConfiguration(new CartConfiguration());
+
+            modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductInCategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+
+            modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryTranslationConfiguration());
+            modelBuilder.ApplyConfiguration(new ContactConfiguration());
+            modelBuilder.ApplyConfiguration(new LanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
+            modelBuilder.ApplyConfiguration(new PromotionConfiguration());
+            modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+
+            //base.OnModelCreating (modelBuilder);
+        }
+
+       public DbSet<Product> Products { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<ProductBrand> ProductBrands { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<AppConfig> AppConfigs { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
+        public DbSet<ProductInCategory> ProductInCategories { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Language> Languages { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<ProductTranslation> ProductTranslations { get; set; }
+        public DbSet<Promotion> Promotions { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
 
-        protected override void OnModelCreating (ModelBuilder modelBuilder) {
-            base.OnModelCreating (modelBuilder);
-            modelBuilder.ApplyConfigurationsFromAssembly (Assembly.GetExecutingAssembly ());
-            
-            if (Database.ProviderName == "Microsoft.EntityFrameworkCore.Sqlite") {
-                foreach (var entityType in modelBuilder.Model.GetEntityTypes ()) {
-                    var properties = entityType.ClrType.GetProperties ().Where (p => p.PropertyType == typeof (decimal));
-                    foreach (var property in properties) {
-                        modelBuilder.Entity (entityType.Name).Property (property.Name).HasConversion<double> ();
-                    }
-                }
-            }
-
-        }
     }
 }

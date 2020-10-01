@@ -2,8 +2,9 @@ using System.Collections.Generic;
 
 namespace Core.Entities
 {
-    public class Language : BaseEntity
+    public class Language  
     {
+        public string Id { get; set; }
          public string Name { get; set; }
 
         public bool IsDefault { get; set; }

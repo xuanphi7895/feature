@@ -16,14 +16,14 @@ export class ShopService {
   getProducts(shopParams: ShopParams){
     let params = new HttpParams();
 
-    if (shopParams.brandId){
-      params = params.append('brandId', shopParams.brandId.toString());
+    if (shopParams.brandIdSelected){
+      params = params.append('brandId', shopParams.brandIdSelected.toString());
     }
-    if (shopParams.typeId){
-      params = params.append('typeId', shopParams.typeId.toString());
+    if (shopParams.typeIdSelected){
+      params = params.append('typeId', shopParams.typeIdSelected.toString());
     }
-    if (shopParams.sort) {
-      params = params.append('sort', shopParams.sort);
+    if (shopParams.sortSelected) {
+      params = params.append('sort', shopParams.sortSelected);
     }
 
     return this.http.get<IPagination>(this.baseUrl + 'products', {observe: 'response', params})

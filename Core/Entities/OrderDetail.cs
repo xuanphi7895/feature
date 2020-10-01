@@ -1,9 +1,8 @@
-namespace Core.Entities
-{
-    public class OrderDetail 
-    {
+using System;
+namespace Core.Entities {
+    public class OrderDetail {
 
-        public int OrderId { set; get; }   
+        public int OrderId { set; get; }
         public int ProductId { set; get; }
         public int Quantity { set; get; }
         public decimal Price { set; get; }

@@ -11,6 +11,8 @@ namespace Infrastructure.Data.Config
             builder.ToTable("Transactions");
 
             builder.HasKey(x => x.Id);
+             builder.Property(x => x.Amount).HasColumnType("decimal(18,2)");
+             builder.Property(x => x.Fee).HasColumnType("decimal(18,2)");
 
             // builder.Property(x => x.Id).UseIdentityColumn();
         }

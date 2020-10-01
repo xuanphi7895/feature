@@ -1,14 +1,14 @@
 [
     {
-        "Id": 1,
+        
         "Name": "Angular"
     }, 
     {
-        "Id": 2,
+        
         "Name": "Net Core"
     },
     {
-        "Id": 3,
+        
         "Name": "ReactJS"
     }
 ]
