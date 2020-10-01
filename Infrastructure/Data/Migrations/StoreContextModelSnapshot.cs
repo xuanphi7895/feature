@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Infrastructure.Migrations
+namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
     partial class StoreContextModelSnapshot : ModelSnapshot
@@ -195,7 +195,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 9, 30, 18, 40, 30, 190, DateTimeKind.Local).AddTicks(7661));
+                        .HasDefaultValue(new DateTime(2020, 10, 1, 18, 34, 10, 518, DateTimeKind.Local).AddTicks(4766));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()

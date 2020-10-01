@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Infrastructure.Migrations
+namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20200930114030_InitialCreate")]
+    [Migration("20201001113410_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -197,7 +197,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 9, 30, 18, 40, 30, 190, DateTimeKind.Local).AddTicks(7661));
+                        .HasDefaultValue(new DateTime(2020, 10, 1, 18, 34, 10, 518, DateTimeKind.Local).AddTicks(4766));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
