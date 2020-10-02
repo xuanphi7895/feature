@@ -45,11 +45,11 @@
                   [pageNumber]="this.shopParams.pageIndex">
                 </app-paging-header>
                 <div class="form-inline mt-2">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        <button class="btn btn-outline-success my-2 ml-2 my-sm-0" type="submit">Reset</button>
-                      </form>
+                     
+                        <input (keyup.enter)="onSearch()" class="form-control mr-sm-2" #search placeholder="Search" aria-label="Search">
+                        <button (click)="onSearch()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <button (click)="onReset()" class="btn btn-outline-success my-2 ml-2 my-sm-0" type="submit">Reset</button>
+                      
                 </div>
               </div>
              
