@@ -22,10 +22,14 @@ export class ShopService {
     if (shopParams.typeId !== 0){
       params = params.append('typeId', shopParams.typeId.toString());
     }
+    if (shopParams.search){
+      params = params.append('search', shopParams.search);
+      console.log(params);
+    }
     params = params.append('sort', shopParams.sortSelected);
     params = params.append('pageIndex', shopParams.pageIndex.toString());
     params = params.append('pageSize', shopParams.pageSize.toString());
-
+    console.log(params);
     return this.http.get<IPagination>(this.baseUrl + 'products', {observe: 'response', params})
             .pipe(
               delay(1000),
