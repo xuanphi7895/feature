@@ -1,3 +1,4 @@
+import { IProduct } from './../shared/models/product';
 import { ShopParams } from './../shared/models/shopParams';
 import { IType } from './../shared/models/productTypes';
 import { IBrand } from './../shared/models/productBrand';
@@ -40,6 +41,9 @@ export class ShopService {
             );
   }
 
+  getProduct(productId: number) {
+    return this.http.get<IProduct>(this.baseUrl + 'products/' + productId);
+  }
   // tslint:disable-next-line: typedef
   getProductBrands(){
     return this.http.get<IBrand[]>(this.baseUrl + 'products/brands');
