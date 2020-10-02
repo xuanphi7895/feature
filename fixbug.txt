@@ -11,3 +11,7 @@
             2. dotnet ef migrations remove
             3. dotnet ef migrations add InitialCreate -p Infrastructure -s Web -o Data/Migrations
             4. dotnet ef database update -p Infrastructure -s Web
+
+## Create single page in angular with command line quickly
+    1. ng g m home - create new model home
+    2. ng g c home  - create folder home include file html, ts, scss, module
