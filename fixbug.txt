@@ -15,3 +15,7 @@
 ## Create single page in angular with command line quickly
     1. ng g m home - create new model home
     2. ng g c home (--skip-tests)  - create folder home include file html, ts, scss, module
+
+     CLient:
+     125 Adding breadcrumbs - Add breadcrumbs -- npm install --save xng-breadcrumb
+     
