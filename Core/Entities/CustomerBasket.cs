@@ -3,11 +3,11 @@ using Core.Entities;
 namespace Core.Entities {
     public class CustomerBasket {
         public CustomerBasket () { }
-        public CustomerBasket (int id) {
+        public CustomerBasket (string id) {
             Id = id;
 
         }
-        public int Id { get; set; }
+        public string Id { get; set; }
         public List<BasketItem> Items { get; set; } = new List<BasketItem> ();
     }
 }
