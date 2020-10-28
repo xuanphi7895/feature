@@ -86,3 +86,10 @@ C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\runtimes\win-
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\StackExchange.Redis.dll
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
