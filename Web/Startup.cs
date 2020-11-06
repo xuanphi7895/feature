@@ -10,12 +10,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using StackExChange.Redis;
+using StackExchange.Redis;
 using Web.Controllers;
 using Web.Extensions;
 using Web.Helpers;
@@ -34,7 +33,7 @@ namespace Web {
             services.AddAutoMapper (typeof (MappingProfiles));
             //services.AddDbContext<StoreContext> (x => x.UseSqlite (_config.GetConnectionString ("DefaultString")));
             services.AddDbContext<StoreContext> (sql => sql.UseSqlServer (_config.GetConnectionString ("SQLDefaultString")));
-            services.AddSingleton<ConnectionMultiplexer> (c => {
+            services.AddSingleton<IConnectionMultiplexer> (c => {
                 var configuration = ConfigurationOptions.Parse (_config.GetConnectionString ("Redis"), true);
                 return ConnectionMultiplexer.Connect(configuration);
             });
