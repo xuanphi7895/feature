@@ -18,4 +18,9 @@
 
      CLient:
      125 Adding breadcrumbs - Add breadcrumbs -- npm install --save xng-breadcrumb
+
+
+## Check and get in redis with cli
+    - keys *  : GET all items in redis
+    - get 'name' : Get a item detail in redis
      

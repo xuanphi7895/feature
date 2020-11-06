@@ -1,3 +1,5 @@
+import { IBasket } from './../shared/models/basket';
+import { BasketService } from './basket.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasketComponent implements OnInit {
 
-  constructor() { }
+  id: string;
+  basket: IBasket;
+  constructor(private basketService: BasketService) { }
 
   ngOnInit(): void {
+    this.getBasket();
+    console.log(this.getBasket);
+  }
+
+  getBasket(){
+    return this.basketService.getBasket(this.id);
+  }
+
+  setBasket(){
+    return this.basketService.setBasket(this.basket);
   }
 
 }
