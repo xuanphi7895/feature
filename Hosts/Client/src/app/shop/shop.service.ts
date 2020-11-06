@@ -41,6 +41,7 @@ export class ShopService {
             );
   }
 
+  // tslint:disable-next-line: typedef
   getProduct(productId: number) {
     return this.http.get<IProduct>(this.baseUrl + 'products/' + productId);
   }

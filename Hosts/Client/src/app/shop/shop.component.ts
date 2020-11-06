@@ -31,6 +31,7 @@ export class ShopComponent implements OnInit {
     this.getProductTypes();
   }
 
+  // tslint:disable-next-line: typedef
   getProducts() {
     this.shopService.getProducts(this.shopParams).subscribe(response => {
       this.products = response.data;
@@ -43,6 +44,7 @@ export class ShopComponent implements OnInit {
     });
   }
 
+  // tslint:disable-next-line: typedef
   getProductBrands() {
     this.shopService.getProductBrands().subscribe(response => {
       this.productBrands = [{id: 0, name: 'All'}, ...response];
@@ -52,6 +54,7 @@ export class ShopComponent implements OnInit {
     });
   }
 
+  // tslint:disable-next-line: typedef
   getProductTypes() {
     this.shopService.getProductTypes().subscribe(response => {
       this.productTypes = [{id: 0, name: 'All'}, ...response];
@@ -60,30 +63,36 @@ export class ShopComponent implements OnInit {
     });
   }
 
+   // tslint:disable-next-line: typedef
    onBrandSelected(brandId: number) {
     this.shopParams.brandId = brandId;
     this.getProducts();
   }
 
+  // tslint:disable-next-line: typedef
   onTypeSelected(typeId: number) {
     this.shopParams.typeId = typeId;
     this.getProducts();
   }
 
+  // tslint:disable-next-line: typedef
   onSortSelected(sort: string) {
     this.shopParams.sortSelected = sort;
     this.getProducts();
   }
+  // tslint:disable-next-line: typedef
   onPageChanged(event: any) {
     this.shopParams.pageIndex = event;
     this.getProducts();
   }
 
+  // tslint:disable-next-line: typedef
   onSearch() {
     this.shopParams.search = this.searchTerm.nativeElement.value;
     this.getProducts();
   }
 
+  // tslint:disable-next-line: typedef
   onReset() {
     this.searchTerm.nativeElement.value = '';
     this.shopParams = new ShopParams();
