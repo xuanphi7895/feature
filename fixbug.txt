@@ -24,3 +24,14 @@
     - keys *  : GET all items in redis
     - get 'name' : Get a item detail in redis
      
+## This Projects covers all fundamentals of Angular
+        Multiple Modules
+        Components, Template and DataBinding
+        Form Validation
+        HttpClient
+        Animations
+        Dependency Injection
+        Routing & Navigation
+        Service Workers
+        Pipes
+        Gaurds 
