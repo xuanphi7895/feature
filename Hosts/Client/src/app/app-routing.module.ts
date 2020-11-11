@@ -1,3 +1,4 @@
+import { CheckoutComponent } from './checkout/checkout.component';
 import { TestErrorComponent } from './core/test-error/test-error.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path: 'not-found', component: NotfoundComponent, data: {breadcrumb: 'Not-Found'}},
    {path: 'shop', loadChildren: () => import('./shop/shop.module').then(mode => mode.ShopModule), data:{breadcrumb: 'Shop'}},
    {path: 'basket', loadChildren: () => import('./basket/basket.module').then(mode => mode.BasketModule), data:{breadcrumb: 'Basket'}},
-  // {path: 'shop/:id', component: ProductDetailsComponent},
+   {path: 'checkout', loadChildren: () => import('./checkout/checkout.module').then(mode => mode.CheckoutModule), data: { breadcrumb: 'Checkout'}},
   {path: '**', redirectTo: 'not-found', pathMatch: 'full'}
 ];
 
