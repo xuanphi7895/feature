@@ -1,0 +1,12 @@
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\bin\Debug\netstandard2.1\Infrastructure.deps.json
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\bin\Debug\netstandard2.1\Infrastructure.dll
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\bin\Debug\netstandard2.1\Infrastructure.pdb
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\bin\Debug\netstandard2.1\Core.dll
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\bin\Debug\netstandard2.1\Core.pdb
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.csprojAssemblyReference.cache
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.AssemblyInfo.cs
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.csproj.CopyComplete
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.dll
+C:\Users\PHITX\Desktop\Project\feature\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.pdb
