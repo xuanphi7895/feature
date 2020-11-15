@@ -31,8 +31,8 @@ namespace Web {
         public void ConfigureServices (IServiceCollection services) {
             services.AddControllers ();
             services.AddAutoMapper (typeof (MappingProfiles));
-            //services.AddDbContext<StoreContext> (x => x.UseSqlite (_config.GetConnectionString ("DefaultString")));
-            services.AddDbContext<StoreContext> (sql => sql.UseSqlServer (_config.GetConnectionString ("SQLDefaultString")));
+            services.AddDbContext<StoreContext> (x => x.UseSqlite (_config.GetConnectionString ("DefaultString")));
+            // services.AddDbContext<StoreContext> (sql => sql.UseSqlServer (_config.GetConnectionString ("SQLDefaultString")));
             services.AddSingleton<IConnectionMultiplexer> (c => {
                 var configuration = ConfigurationOptions.Parse (_config.GetConnectionString ("Redis"), true);
                 return ConnectionMultiplexer.Connect(configuration);
