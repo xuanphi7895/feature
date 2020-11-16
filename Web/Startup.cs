@@ -19,7 +19,7 @@ using Web.Controllers;
 using Web.Extensions;
 using Web.Helpers;
 using Web.Middleware;
-
+using Infrastructure.Identity;
 namespace Web {
     public class Startup {
         private readonly IConfiguration _config;
@@ -33,6 +33,8 @@ namespace Web {
             services.AddAutoMapper (typeof (MappingProfiles));
             services.AddDbContext<StoreContext> (x => x.UseSqlite (_config.GetConnectionString ("DefaultString")));
             // services.AddDbContext<StoreContext> (sql => sql.UseSqlServer (_config.GetConnectionString ("SQLDefaultString")));
+            services.AddDbContext<AppIdentityDbContext>(x => x.UseSqlite (_config.GetConnectionString ("IdentityString")));
+            services.AddIdentityServices();
             services.AddSingleton<IConnectionMultiplexer> (c => {
                 var configuration = ConfigurationOptions.Parse (_config.GetConnectionString ("Redis"), true);
                 return ConnectionMultiplexer.Connect(configuration);

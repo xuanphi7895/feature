@@ -46,7 +46,6 @@ C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\SQLitePCLRaw.
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
-C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
 C:\Users\PHITX\Desktop\Project\feature\Web\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so

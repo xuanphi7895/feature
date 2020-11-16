@@ -5,8 +5,9 @@ using System.Linq;
 using System.Reflection;
 
 namespace Infrastructure.Data {
-    public class StoreContext : DbContext {
-        public StoreContext (DbContextOptions options) : base (options) {
+    public class StoreContext : DbContext 
+    {
+        public StoreContext (DbContextOptions<StoreContext> options) : base (options) {
 
         }
 

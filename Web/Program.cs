@@ -9,6 +9,9 @@ using Microsoft.Extensions.Logging;
 using Infrastructure.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Infrastructure.Identity;
+using Microsoft.AspNetCore.Identity;
+using Core.Entities.Identity;
 
 namespace Web
 {
@@ -26,6 +29,11 @@ namespace Web
                   var context = services.GetRequiredService<StoreContext>();
                   await context.Database.MigrateAsync();  
                   await StoreContextSeedData.SeedAsync(context, loggerFactory);    
+
+                  var userManager = services.GetRequiredService<UserManager<AppUser>>();
+                   var identityContext =  services.GetRequiredService<AppIdentityDbContext>();
+                  await identityContext.Database.MigrateAsync();
+                  await AppIdentityDbContextSeed.SeedUsersAsync(userManager);
                 }
                 catch (Exception ex)
                 {
