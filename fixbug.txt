@@ -35,3 +35,12 @@
         Service Workers
         Pipes
         Gaurds
+
+
+## How to git develop to master
+    git checkout master
+    git merge develop
+    git push origin master
+
+    ## Reverting pushed commit
+    git revert HEAD^ID (ID: 0 or 1 ..or id hash)
