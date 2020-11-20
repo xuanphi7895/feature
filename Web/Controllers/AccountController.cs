@@ -1,3 +1,4 @@
+using System.Runtime.Intrinsics.X86;
 using System.ComponentModel;
 using System.Net.Mime;
 using Microsoft.AspNetCore.Identity;
@@ -31,6 +32,27 @@ namespace Web.Controllers
 
             return new UserDto
             {
+                Email = user.Email,
+                Token = "This is be a token",
+                DisplayName = user.DisplayName
+            };
+        }
+
+        [HttpPost("register")]
+        public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto){
+            //var user = await _userManager.FindByEmailAsync(registerDto.Email);
+            //if (user != null) return Unauthorized(new ApiResponse(401));
+           var user = new AppUser {
+                Email = registerDto.Email,
+                UserName = registerDto.Email,
+                DisplayName = registerDto.DisplayName
+
+            };
+            var result = await _userManager.CreateAsync(user, registerDto.Password);
+
+            if (!result.Succeeded) return BadRequest(new ApiResponse(400));
+
+            return new UserDto {
                 Email = user.Email,
                 Token = "This is be a token",
                 DisplayName = user.DisplayName
