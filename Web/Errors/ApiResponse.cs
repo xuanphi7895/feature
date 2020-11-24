@@ -18,8 +18,8 @@ namespace Web.Errors
                 200 => "Get success",
                 201 => "Create new object",
                 400 => "A bad request",
-                401 => "Authorized",
-                404 => "Not found",
+                401 => "Authorized, you are not",
+                404 => "Not found, please check url",
                 500 => "Server error",
                 _  => null
             };

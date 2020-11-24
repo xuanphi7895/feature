@@ -34,7 +34,7 @@ namespace Web {
             services.AddDbContext<StoreContext> (x => x.UseSqlite (_config.GetConnectionString ("DefaultString")));
             // services.AddDbContext<StoreContext> (sql => sql.UseSqlServer (_config.GetConnectionString ("SQLDefaultString")));
             services.AddDbContext<AppIdentityDbContext>(x => x.UseSqlite (_config.GetConnectionString ("IdentityString")));
-            services.AddIdentityServices();
+            services.AddIdentityServices(_config);
             services.AddSingleton<IConnectionMultiplexer> (c => {
                 var configuration = ConfigurationOptions.Parse (_config.GetConnectionString ("Redis"), true);
                 return ConnectionMultiplexer.Connect(configuration);
@@ -70,6 +70,7 @@ namespace Web {
             app.UseCors ("CorsPolicy");
             app.UseRouting ();
 
+            app.UseAuthentication();         
             app.UseAuthorization ();
 
             app.UseEndpoints (endpoints => {

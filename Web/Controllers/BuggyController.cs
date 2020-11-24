@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Infrastructure.Data;
 using Web.Errors;
+using Microsoft.AspNetCore.Authorization;
+
 namespace Web.Controllers
 {
     public class BuggyController : BaseApiController
@@ -28,6 +30,12 @@ namespace Web.Controllers
             var thing = _context.Products.Find(42);
             var thingToReturn = thing.ToString();
             return Ok();
+        }
+
+        [HttpGet("testauth")]
+        [Authorize]
+        public ActionResult<string> GetSecretText(){
+            return "your secret";
         }
 
         [HttpGet("badrequest")]
