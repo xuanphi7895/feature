@@ -1,0 +1,4 @@
+bin
+obj
+/Web/obj
+/Web/bin
