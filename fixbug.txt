@@ -44,3 +44,11 @@
 
     ## Reverting pushed commit
     git revert HEAD^ID (ID: 0 or 1 ..or id hash)
+
+
+## HTTP error code meaning?
+    If request was successful, then return 2xx code (3xx for redirect). If there was an internal logic error on a server, then return 5xx. If there is anything wrong in client request, then return 4xx code.
+Look through available response code from selected category. If one of them has a name which matches well to your situation, you can use it. Otherwise just fallback to x00 code (200, 400, 500). If you doubt, fallback to x00 code.
+Return error description in response body. For 4xx codes it must contain enough information for client developer to understand the reason and fix the client. For 5xx because of security reasons no details must be revealed.
+If client needs to distinguish different errors and have different reaction depending on it, define a machine readable and extendible error format and use it everywhere in your API. It is good practice to make that from very beginning.
+Keep in mind that client developer may do strange things and try to parse strings which you return as human readable description. And by changing the strings you will break such badly written clients. So always provide machine readable description and try to avoid reporting additional information in text.

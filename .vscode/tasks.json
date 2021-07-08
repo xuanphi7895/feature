@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"path": "Hosts/admin/",
+			"problemMatcher": [],
+			"label": "npm: install - Hosts/admin",
+			"detail": "install dependencies from package"
+		}
+	]
+}
