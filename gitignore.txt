@@ -2,3 +2,7 @@
 *.obj
 /Web/obj
 /Web/bin
+/Core/obj
+/Core/bin
+/Infrastructure/obj
+/Infrastructure/bin
