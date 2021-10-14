@@ -81,7 +81,13 @@ namespace Web.Controllers
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto){
             //var user = await _userManager.FindByEmailAsync(registerDto.Email);
             //if (user != null) return Unauthorized(new ApiResponse(401));
-           var user = new AppUser {
+            if (CheckEmailExistsAsync(registerDto.Email).Result.Value)
+            {
+                return new BadRequestObjectResult(new ApiValidationErrorResponse 
+                                        {Errors = new string[] {"Email address is in user"} }
+                                );
+            }
+            var user = new AppUser {
                 Email = registerDto.Email,
                 UserName = registerDto.Email,
                 DisplayName = registerDto.DisplayName
