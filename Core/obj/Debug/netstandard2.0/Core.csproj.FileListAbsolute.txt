@@ -1,9 +1,0 @@
-C:\Users\PHITX\Desktop\Project\feature\Core\bin\Debug\netstandard2.0\Core.deps.json
-C:\Users\PHITX\Desktop\Project\feature\Core\bin\Debug\netstandard2.0\Core.dll
-C:\Users\PHITX\Desktop\Project\feature\Core\bin\Debug\netstandard2.0\Core.pdb
-C:\Users\PHITX\Desktop\Project\feature\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
-C:\Users\PHITX\Desktop\Project\feature\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
-C:\Users\PHITX\Desktop\Project\feature\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
-C:\Users\PHITX\Desktop\Project\feature\Core\obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache
-C:\Users\PHITX\Desktop\Project\feature\Core\obj\Debug\netstandard2.0\Core.dll
-C:\Users\PHITX\Desktop\Project\feature\Core\obj\Debug\netstandard2.0\Core.pdb
