@@ -14,6 +14,7 @@ using Web.Errors;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using System.Linq;
+using Web.Extensions;
 
 namespace Web.Controllers
 {
@@ -54,8 +55,8 @@ namespace Web.Controllers
         [HttpGet]
         public async Task<ActionResult<UserDto>> GetCurrentUser()
         {
-            var email = HttpContext.User?.Claims?.FirstOrDefault( x => x.Type == ClaimTypes.Email)?.Value;
-            var user = await _userManager.FindByEmailAsync(email);
+            
+            var user = await _userManager.FindByEmailFromClaimsPrinciple(HttpContext.User);
             return new UserDto
             {
                 Email = user.Email,
@@ -64,18 +65,17 @@ namespace Web.Controllers
             };
         }
         //email exsists
-        [HttpGet("emailexists")]
+        [HttpGet("emailExists")]
         public async Task<ActionResult<bool>> CheckEmailExistsAsync([FromQuery] string email){
             return await _userManager.FindByEmailAsync(email) != null;
         }
 
-        // //address
-        // [HttpGet("address")]
-        // public async Task<ActionResult<string>> GetUserAddress([FromQuery] string email){
-        //     var email = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
-        //     var user = await _userManager.FindByEmailAsync(email);
-        //     return user.Address;
-        // }
+        [Authorize]
+        [HttpGet("address")]
+        public async Task<ActionResult<Address>> GetUserAddress(){
+            var user = await _userManager.FindByEmailWithAddressAsync(HttpContext.User);
+            return user.Address;
+        }
 
         [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto){
